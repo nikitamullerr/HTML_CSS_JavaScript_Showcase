@@ -7,7 +7,297 @@
 
 /* Adam */
 
+/* ─── Reset & Base ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+  background-color: #2d2d2d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ─── NAVBAR ─── */
+.navbar {
+  background-color: #7fcba6;
+  padding: 18px 50px 0;
+}
+
+.nav-inner {
+  background: #ffffff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+}
+
+.nav-logo {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #0c2117;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #1e7550;
+}
+
+/* Active page link — set by JavaScript */
+.nav-active {
+  color: #1e7550 !important;
+  font-weight: 700 !important;
+}
+
+/* ─── HERO SECTION ─── */
+main {
+  flex: 1;
+}
+
+.hero {
+  background-color: #7fcba6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px 80px;
+  min-height: 480px;
+}
+
+.hero-content {
+  flex: 0 0 auto;
+  max-width: 460px;
+}
+
+.hero-heading {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #0c2117;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.hero-sub-line {
+  display: block;
+}
+
+.hero-accent {
+  color: #1a6b45;
+}
+
+.hero-paragraph {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 0.92rem;
+  color: #0c2117;
+  line-height: 1.65;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+/* ─── BUTTONS ─── */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #0c3524;
+  color: #ffffff;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #092b1c;
+}
+
+.btn-outline {
+  background-color: #a8dbc0;
+  color: #0c3524;
+  border: 2.5px solid #0c3524;
+  padding: 11px 28px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: rgba(12, 53, 36, 0.08);
+}
+
+/* ─── HERO IMAGE PLACEHOLDER ─── */
+.hero-image-placeholder {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+}
+
+/* Real group photo — fills the box when a src is provided */
+.group-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: none;         /* hidden while src is empty */
+}
+
+/* Show the real image as soon as src is not empty */
+.group-photo[src]:not([src=""]) {
+  display: block;
+}
+
+/* Fallback label — visible while no real image is set */
+.placeholder-label {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #0c2117;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+/* Hide the label once a real image is loaded */
+.group-photo[src]:not([src=""]) ~ .placeholder-label {
+  display: none;
+}
+
+/* ─── FOOTER ─── */
+.footer {
+  background-color: #4fa878;
+}
+
+.footer-top-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 0.72rem;
+  color: #0c2117;
+}
+
+.footer-top-strip a {
+  color: #0c2117;
+  transition: opacity 0.2s;
+}
+
+.footer-top-strip a:hover {
+  opacity: 0.65;
+}
+
+.footer-columns {
+  display: flex;
+  align-items: flex-start;
+  padding: 28px 80px 32px;
+}
+
+.footer-col {
+  padding: 0 32px;
+}
+
+.footer-col:first-child {
+  padding-left: 0;
+}
+
+.footer-col-heading {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #0c2117;
+  margin-bottom: 10px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.footer-col-links li {
+  margin-bottom: 5px;
+}
+
+.footer-col-links a {
+  font-size: 0.75rem;
+  color: #0c2117;
+  transition: opacity 0.2s;
+}
+
+.footer-col-links a:hover {
+  opacity: 0.65;
+}
+
+.footer-divider {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  align-self: stretch;
+}
+
+.footer-col-right {
+  margin-left: auto;
+  text-align: right;
+  padding-right: 0;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  justify-content: flex-end;
+}
+
+.footer-social-icons a {
+  color: #0c2117;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.footer-social-icons a:hover {
+  opacity: 0.65;
+}
+
+.footer-work-heading {
+  margin-bottom: 6px;
+}
+
+.footer-tutorlink-heading {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
 
 /* Nikita */
 

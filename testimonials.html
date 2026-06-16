@@ -11,17 +11,19 @@
 <body>
     <!-- HEADER -->
      <header class="hero">
-        <nav class="navbar">
-            <div class="logo">LOGO</div>
-                    
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="find-a-tutor.html">Find a Tutor</a></li>
-                <li><a href="about-us.html">About</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar-container">
+            <nav class="navbar">
+                <div class="logo">TUTORLINK</div>
+                        
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="find-a-tutor.html">Find a Tutor</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
 
         <h1 id="testimonials-page-heading">Our Success Stories</h1>
      </header>
@@ -36,10 +38,12 @@
 
         <!-- CARDS -->
          <!-- Card 1 -->
-         <div class="story-card">
+            <div class="story-card">
                 <div class="card-header">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <div>
+                    <div class="user-icon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div> 
+                    <div class="card-title">
                         <h2>John Doe</h2>
                         <h3>4 months ago</h3>
                     </div>
@@ -47,14 +51,18 @@
                 <p>
                     "Send your feedback to us so we can make your learning simple"
                 </p>
-                <i class="fa-regular fa-handshake"></i>
+                <span class="rating-icon">
+                    <i class="fa-regular fa-handshake"></i>
+                </span>
             </div>
 
             <!-- Card 2 -->
             <div class="story-card">
                 <div class="card-header">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <div>
+                    <div class="user-icon">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </div>    
+                    <div class="card-title">
                         <h2>John Doe</h2>
                         <h3>4 months ago</h3>
                     </div>
@@ -62,8 +70,12 @@
                 <p>
                     "Send your feedback to us so we can make your learning simple"
                 </p>
-                <i class="fa-regular fa-handshake"></i>
+                <span class="rating-icon">
+                    <i class="fa-regular fa-handshake"></i>
+                </span>
             </div>
+
+            
 
         <!-- Right Arrow -->
          <button class="right-arrow">
@@ -82,27 +94,32 @@
 
     <!-- FOOTER -->
     <footer>
-
-        <div class="footer-column">
+<div class="footer">
+        <ul class="footer-column">
             <h4>NAVIGATION</h4>
-            <a href="home.html">Home</a>
-            <a href="find-a-tutor.html">Find a Tutor</a>
-            <a href="about-us.html">About</a>
-            <a href="testimonials.html">Testimonials</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="find-a-tutor.html">Find a Tutor</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
 
-        <div class="footer-column">
-            <h4>FAQ's</h4>
-            <a href="#">Support</a>
-            <a href="#">Account</a>
-            <a href="#">Billing</a>  
-        </div>
+        <div class="FAQ">
+            <h4>FAQs</h4>
+            <div class="faqs-wrap">
+            
+            <ul class="faq-column-1">
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Billing</a>  </li>
+            </ul>
 
-        <div class="footer-column">
-            <a href="#">Tutoring</a>
-            <a href="#">Company</a>
-            <a href="#">Legal</a>  
+            <ul class="faq-column-2">
+                <li><a href="#">Tutoring</a></li>
+                <li><a href="#">Company</a></li>
+                <li><a href="#">Legal</a></li>
+            </ul>
+            </div>
         </div>
 
         <div class="footer-column">
@@ -118,7 +135,10 @@
             <h4>WORK WITH US</h4>
             <a href="#">View Jobs</a>
         </div>
-
-    </footer>
+    </div>
+     <div class="copyright">
+        <p>Copyright &copy; 2026 TutorLink. All rights reserved. <span><a href="#">Terms of Use</a></span> | <span><a href="#">Privacy Policy</a></span></p>
+    </div>
+     </footer>
 </body>
 </html>

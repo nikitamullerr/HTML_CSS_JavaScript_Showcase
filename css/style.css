@@ -2,7 +2,57 @@
 
 
 /* Angela */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
+body {
+    background: #f5f5f5;
+}
+/* HEADER */
+.hero {
+    background: #0B6B53;
+    height: 17rem;
+}
+.navbar {
+    width: 90%;
+    height: 5rem;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+.logo {
+    padding: 0px 25px;
+    font-weight: bold;
+}
+.nav-links li {
+    display: inline-block;
+    justify-content: space-between;
+    padding: 1rem;
+    list-style-type: none;
+    font-size: 14px;
+
+}
+.nav-links a {
+    text-decoration: none;
+}
+
+#testimonial-page-heading {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+/* NAVBAR */
+.
 
 
 /* Adam */

@@ -18,42 +18,53 @@ body {
 }
 /* HEADER */
 .hero {
-    background: #135e4b;
-    padding: 0.2rem 0 3rem;
+    background: #135E4B;
+    padding: 25px 40px 10px;
+width: 100%;
 }
-.hero h1 {
-    color: white;
-    text-align: center;
-    font-size: 3rem;
-}
+
+/* navbar section */
 .navbar {
-    width: 90%;
-    height: 4rem;
-    margin: 2rem auto;
-    padding: 0 3rem;
-    background-color: white;
-    border-radius: 50px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    padding: 18px 40px;
+    border-radius: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-} 
-.logo {
-    padding: 0px 25px;
-    font-size: 34px;
-    font-weight: bold;
 }
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+}
+
 .nav-links {
     display: flex;
-    gap: 25px;
-    justify-content: space-between;
-    padding: 1rem;
+    gap: 35px;
     list-style: none;
-
 }
+
 .nav-links a {
     text-decoration: none;
-    color: black;
-    font-size: 26px;
+    color: #111;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #4CB572;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    color: white;
 }
 
 /* BODY */
@@ -114,6 +125,83 @@ body {
 
 /* FOOTER */
 footer {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer {
+    background: #4CB572;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2.5rem 1rem;
+    flex-wrap: wrap;
+}
+
+.footer h4 {
+    color: white;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.06rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #135E4B;
+}
+
+.copyright {
+    text-align: center;
+    font-weight: 500;
+    color: black;
+    background-color: #4CB572;
+    padding: 1rem;
+    letter-spacing: 0.07rem;
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.copyright a {
+    color: #135E4B;
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 180px;
+    height: auto;
+}
+
+/* footer {
     bottom: 0;
     left: 0;
     width: 100%;
@@ -179,7 +267,7 @@ footer {
 }
 .copyright a {
     color: #135e4b;
-}
+} */
 /* Adam */
 
 

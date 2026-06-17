@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Rushin */
 
 
@@ -74,7 +73,6 @@ if (privacyLink) {
 
 
 /* Lukho */
-=======
 console.log("JavaScript loaded");
 
 const bookButtons = document.querySelectorAll(".book-btn");
@@ -161,10 +159,3 @@ searchBtn.addEventListener("click", () => {
 
 });
 
-<<<<<<< HEAD
-  });
-
-});
->>>>>>> efff260 (added the css, and javascript to the home page)
-=======
->>>>>>> 5cfc5f3 (changed the pop up for the book now button)

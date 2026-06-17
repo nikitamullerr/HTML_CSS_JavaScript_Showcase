@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Rushin */
 
 
 /* Angela */
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 /* Adam */
 
 /* ─── Reset & Base ─── */
@@ -53,11 +51,8 @@ ul {
   font-size: 1rem;
   color: #0c2117;
   letter-spacing: 0.5px;
-=======
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-=======
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
->>>>>>> 5cfc5f3 (changed the pop up for the book now button)
+
+
 
 * {
   margin: 0;
@@ -103,12 +98,10 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;
->>>>>>> efff260 (added the css, and javascript to the home page)
 }
 
 .nav-links {
   display: flex;
-<<<<<<< HEAD
   gap: 30px;
 }
 
@@ -381,8 +374,7 @@ footer {
     padding: 15px 20px;
     gap: 15px;
   }
-  
-=======
+
   gap: 35px;
   list-style: none;
 }
@@ -764,13 +756,12 @@ footer {
     border-radius: 20px;
   }
 
->>>>>>> efff260 (added the css, and javascript to the home page)
+
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
-<<<<<<< HEAD
   
   /* Hero Section */
   .hero {
@@ -824,7 +815,7 @@ footer {
 
 
 /* Lukho */
-=======
+
 
   .filters {
     flex-direction: column;
@@ -882,4 +873,4 @@ footer {
     width: 95%;
   }
 }
->>>>>>> efff260 (added the css, and javascript to the home page)
+

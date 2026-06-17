@@ -3,65 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/style.css">
   <title>
     Find a Tutor
   </title>
+
 </head>
 <body>
   <div class="main">
-    <nav class="navbar">
-      <div class="logo">LOGO</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Find a Tutor</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
+<div class="hero">
 
-        <h1>Find the Perfect Tutor for You</h1>
-    <p>Connect with trusted, affordable tutors matched to your course, learning style, and budget.</p>
+  <nav class="navbar">
+    <div class="logo">LOGO</div>
 
-    <!-- Filter Section -->
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutUs.html">About</a></li>
+      <li><a href="findATutor.html">Find a Tutor</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contactUs.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+
+    <h1>Find the Perfect Tutor for You</h1>
+
+    <p>
+      Connect with trusted, affordable tutors matched to your course,
+      learning style, and budget.
+    </p>
+
     <div class="filters">
+
       <div class="filter-group">
         <label for="course">Course</label>
-        <select id="course" name="course">
-          <option value="">Select a subject</option>
+        <select id="course">
+          <option>Select a subject</option>
           <option>Mathematics</option>
           <option>Computer Science</option>
           <option>Economics</option>
           <option>Physics</option>
-          <option>English Literature</option>
           <option>Biology</option>
+          <option>English Literature</option>
         </select>
       </div>
 
       <div class="filter-group">
         <label for="price">Price Range</label>
-        <select id="price" name="price">
+        <select id="price">
+          <option>Any Price</option>
           <option>R50 - R100/hr</option>
           <option>R100 - R150/hr</option>
           <option>R150 - R200/hr</option>
-          <option>R200 - R250/hr</option>
-          <option>Any budget</option>
         </select>
       </div>
 
       <div class="filter-group">
         <label for="availability">Availability</label>
-        <select id="availability" name="availability">
-          <option>Evenings & weekends</option>
-          <option>Weekdays only</option>
-          <option>Mornings</option>
+        <select id="availability">
+          <option>Any Availability</option>
+          <option>Evenings & Weekends</option>
+          <option>Weekdays</option>
           <option>Flexible</option>
         </select>
       </div>
 
       <div class="filter-group">
         <label for="learning-style">Learning Style</label>
-        <select id="learning-style" name="learning-style">
+        <select id="learning-style">
+          <option>Any Style</option>
           <option>Visual</option>
           <option>Auditory</option>
           <option>Reading/Writing</option>
@@ -70,7 +82,12 @@
       </div>
 
       <button class="search-btn">Search</button>
+
     </div>
+
+  </div>
+
+</div>
 
      <div class="stats-row">
       <div class="stat">
@@ -92,88 +109,149 @@
     </div>
 
     <div class="product_grid">
-   
+   <p id="no-results" style="display:none; text-align:center; font-weight:bold;">
+  No tutors match your filters. Try adjusting your search.
+</p>
       
    <div class="tutors-grid">
-      <div class="tutor-card">
-        <img src="https://i.ibb.co/FkRYxZ4n/Finda-Tutor.jpg">
-        <div class="card-tag">Tag</div>
-        <h3 class="tutor-name">John Doe</h3>
-        <p class="tutor-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry. Specializes in calculus and linear algebra.</p>
+      <div class="tutor-card"
+        data-course="Mathematics"
+     data-price="R100 - R150/hr"
+     data-availability="Weekdays"
+     data-style="Visual">
+        <img src="https://i.ibb.co/CLgq93v/pexels-boko-shots-812604874-19836045.jpg">
+        <h3 class="tutor-name">David Mwakodi</h3>
+        <div class="tags">
+    <span class="tag">Mathematics</span>
+    <span class="tag">Visual</span>
+    <span class="tag">Weekdays</span>
+  </div>
+
+        <p class="tutor-bio">Patient and encouraging tutor who enjoys helping students build confidence and achieve their academic goals.</p>
         <p class="pay-hour">Pay per hour · R100/hr</p>
         <button class="book-btn">Book Now</button>
       </div>
 
-    <div class="tutor-card">
-        <div class="card-tag">Tag</div>
-        <img src="https://i.ibb.co/FkRYxZ4n/Finda-Tutor.jpg">
-        <h3 class="tutor-name">John Doe</h3>
-        <p class="tutor-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry. Specializes in calculus and linear algebra.</p>
+    <div class="tutor-card"
+    data-course="Computer Science"
+     data-price="R150 - R200/hr"
+     data-availability="Flexible"
+     data-style="Hands-on">
+        <img src="https://i.ibb.co/pjsYyBW0/pexels-globaldecency-13565833.jpg">
+        <h3 class="tutor-name">Cherish Nwachukwu</h3>
+        <div class="tags">
+    <span class="tag">Computer Science</span>
+    <span class="tag">Hands-on</span>
+    <span class="tag">Flexible</span>
+  </div>
+        <p class="tutor-bio">Dedicated tutor with a passion for simplifying difficult concepts and making learning enjoyable.</p>
         <p class="pay-hour">Pay per hour · R150/hr</p>
         <button class="book-btn">Book Now</button>
       </div>
 
 
-    <div class="tutor-card">
-        <div class="card-tag">Tag</div>
-        <img src="https://i.ibb.co/FkRYxZ4n/Finda-Tutor.jpg">
-        <h3 class="tutor-name">John Doe</h3>
-        <p class="tutor-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry. Specializes in calculus and linear algebra.</p>
+    <div class="tutor-card"
+    data-course="Economics"
+     data-price="R50 - R100/hr"
+     data-availability="Weekdays"
+     data-style="Reading/Writing">
+        <img src="https://i.ibb.co/0jbhHc2f/pexels-mikhail-nilov-6981004.jpg">
+        <h3 class="tutor-name">Mikayla Nilov</h3>
+        <div class="tags">
+    <span class="tag">Economics</span>
+    <span class="tag">Reading/Writing</span>
+    <span class="tag">Weekdays</span>
+  </div>
+        <p class="tutor-bio">Friendly and supportive tutor who creates a positive learning environment for every student.</p>
         <p class="pay-hour">Pay per hour · R50/hr</p>
         <button class="book-btn">Book Now</button>
       </div>
      
-    <div class="tutor-card">
-        <div class="card-tag">Tag</div>
-        <img src="https://i.ibb.co/FkRYxZ4n/Finda-Tutor.jpg">
-        <h3 class="tutor-name">John Doe</h3>
-        <p class="tutor-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry. Specializes in calculus and linear algebra.</p>
+    <div class="tutor-card"
+    data-course="Physics"
+     data-price="R150 - R200/hr"
+     data-availability="Evenings & Weekends"
+     data-style="Visual">
+        <img src="https://i.ibb.co/LXhS7ntL/pexels-oluwaseun-adekoya-670640633-17798552.jpg">
+        <h3 class="tutor-name">Olwakhe Adekoya</h3>
+        <div class="tags">
+    <span class="tag">Physics</span>
+    <span class="tag">Visual</span>
+    <span class="tag">Evenings & Weekends</span>
+  </div>
+        <p class="tutor-bio">Experienced tutor who focuses on practical understanding and steady academic improvement.</p>
         <p class="pay-hour">Pay per hour · R200/hr</p>
         <button class="book-btn">Book Now</button>
       </div>
 
 
-    <div class="tutor-card">
-        <div class="card-tag">Tag</div>
-        <img src="https://i.ibb.co/FkRYxZ4n/Finda-Tutor.jpg">
-        <h3 class="tutor-name">John Doe</h3>
-        <p class="tutor-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry. Specializes in calculus and linear algebra.</p>
-        <p class="pay-hour">Pay per hour · R100/hr</p>
-        <button class="book-btn">Book Now</button>
-      </div>
+    <div class="tutor-card"
+    data-course="Biology"
+     data-price="R100 - R150/hr"
+     data-availability="Weekdays"
+     data-style="Hands-on">
 
-    <div class="tutor-card">
-        <div class="card-tag">Tag</div>
-        <img src="https://i.ibb.co/FkRYxZ4n/Finda-Tutor.jpg">
-        <h3 class="tutor-name">John Doe</h3>
-        <p class="tutor-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry. Specializes in calculus and linear algebra.</p>
-        <p class="pay-hour">Pay per hour · R100/hr</p>
-        <button class="book-btn">Book Now</button>
-      </div>
+        <img src="https://i.ibb.co/XrtmbLxk/pexels-katerina-holmes-5905483.jpg
+">
+        <h3 class="tutor-name">Njabulo Mokoena</h3>
 
-    <div class="tutor-card">
-        <div class="card-tag">Tag</div>
-        <img src="https://i.ibb.co/FkRYxZ4n/Finda-Tutor.jpg">
-        <h3 class="tutor-name">John Doe</h3>
-        <p class="tutor-bio">Lorem ipsum is simply dummy text of the printing and typesetting industry. Specializes in calculus and linear algebra.</p>
-        <p class="pay-hour">Pay per hour · R100/hr</p>
-        <button class="book-btn">Book Now</button>
-      </div>
-
-    <div class=""
+        <div class="tags">
+    <span class="tag">Biology</span>
+    <span class="tag">Hands-on</span>
+    <span class="tag">Weekdays</span>
   </div>
+
+        <p class="tutor-bio">Enthusiastic educator who helps students develop strong study habits and problem-solving skills.</p>
+        <p class="pay-hour">Pay per hour · R100/hr</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+    <div class="tutor-card"
+    data-course="Computer Science"
+     data-price="R150 - R200/hr"
+     data-availability="Flexible"
+     data-style="Hands-on">
+        <img src="https://i.ibb.co/tFJ76Nm/pexels-rdne-9034247.jpg" alt="pexels-rdne-9034247">
+        <h3 class="tutor-name">John Doe</h3>
+        <div class="tags">
+    <span class="tag">Computer Science</span>
+    <span class="tag">Hands-on</span>
+    <span class="tag">Flexible</span>
   </div>
-</body>
+        <p class="tutor-bio">Motivated tutor who enjoys guiding students through challenging subjects with clarity and patience.</p>
+        <p class="pay-hour">Pay per hour · R100/hr</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+    <div class="tutor-card"
+    data-course="English Literature"
+     data-price="R50 - R100/hr"
+     data-availability="Evenings & Weekends"
+     data-style="Reading/Writing">
+        <img src="https://i.ibb.co/3yCZ54Pf/pexels-rdne-9065245.jpg">
+        <h3 class="tutor-name">James Johnson</h3>
+        <div class="tags">
+    <span class="tag">English Literature</span>
+    <span class="tag">Reading/Writing</span>
+    <span class="tag">Evenings & Weekends</span>
+  </div>
+        <p class="tutor-bio">Compassionate tutor who believes every student can succeed with the right support and encouragement.</p>
+        <p class="pay-hour">Pay per hour · R100/hr</p>
+        <button class="book-btn">Book Now</button>
+      </div>
+
+  </div>
+
 <footer class="footer">
     <div class="footer-grid">
       <div class="footer-col">
         <h4>NAVIGATION</h4>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Find a Tutor</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="findATutor.html">Find a Tutor</a></li>
+          <li><a href="aboutUs.html">About</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
       </div>
 
@@ -208,7 +286,8 @@
 
     <div class="copyright">
       <span>© 2026 TutorLink. All rights reserved.</span>
-      <span><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></span>
     </div>
   </footer>
+  <script src="javascript/script.js"></script>
+</body>
 </html>

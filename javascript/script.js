@@ -76,68 +76,95 @@ if (privacyLink) {
 /* Lukho */
 =======
 console.log("JavaScript loaded");
+
 const bookButtons = document.querySelectorAll(".book-btn");
+
+const modal = document.getElementById("bookingModal");
+const selectedTutor = document.getElementById("selectedTutor");
+const closeModal = document.getElementById("closeModal");
 
 bookButtons.forEach(button => {
   button.addEventListener("click", () => {
+
     const tutorCard = button.closest(".tutor-card");
     const tutorName = tutorCard.querySelector(".tutor-name").textContent;
 
-    alert(`You selected ${tutorName}`);
+    selectedTutor.textContent =
+      `You selected ${tutorName}.`;
+
+    modal.style.display = "flex";
   });
 });
 
+closeModal.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
 // filtering buttons - find a tutor page
-document.addEventListener("DOMContentLoaded", () => {
+const searchBtn = document.querySelector(".search-btn");
 
-  const searchBtn = document.querySelector(".search-btn");
-  const tutors = document.querySelectorAll(".tutor-card");
-  const noResults = document.getElementById("no-results");
+searchBtn.addEventListener("click", () => {
 
-  searchBtn.addEventListener("click", () => {
+    const selectedCourse =
+        document.getElementById("course").value;
 
-    const selectedCourse = document.getElementById("course").value;
-    const selectedPrice = document.getElementById("price").value;
-    const selectedAvailability = document.getElementById("availability").value;
-    const selectedStyle = document.getElementById("learning-style").value;
+    const selectedPrice =
+        document.getElementById("price").value;
 
-    let hasMatch = false;
+    const selectedAvailability =
+        document.getElementById("availability").value;
+
+    const selectedStyle =
+        document.getElementById("learning-style").value;
+
+    const tutors =
+        document.querySelectorAll(".tutor-card");
 
     tutors.forEach((tutor) => {
 
-      const course = tutor.dataset.course;
-      const price = tutor.dataset.price;
-      const availability = tutor.dataset.availability;
-      const style = tutor.dataset.style;
+        const course = tutor.dataset.course;
+        const price = tutor.dataset.price;
+        const availability = tutor.dataset.availability;
+        const style = tutor.dataset.style;
 
-      const courseMatch =
-        selectedCourse === "Select a subject" || selectedCourse === course;
+        const courseMatch =
+            selectedCourse === "Select a subject" ||
+            selectedCourse === course;
 
-      const priceMatch =
-        selectedPrice === "Any Price" || selectedPrice === price;
+        const priceMatch =
+            selectedPrice === price;
 
-      const availabilityMatch =
-        selectedAvailability === "Any Availability" || selectedAvailability === availability;
+        const availabilityMatch =
+            selectedAvailability === availability;
 
-      const styleMatch =
-        selectedStyle === "Any Style" || selectedStyle === style;
+        const styleMatch =
+            selectedStyle === style;
 
-      if (courseMatch && priceMatch && availabilityMatch && styleMatch) {
-        tutor.style.display = "block";
-        hasMatch = true;
-      } else {
-        tutor.style.display = "none";
-      }
+        if (
+            courseMatch &&
+            priceMatch &&
+            availabilityMatch &&
+            styleMatch
+        ) {
+            tutor.style.display = "block";
+        } else {
+            tutor.style.display = "none";
+        }
+
     });
 
-    // show/hide no results message
-    if (hasMatch) {
-      noResults.style.display = "none";
-    } else {
-      noResults.style.display = "block";
-    }
+});
 
+<<<<<<< HEAD
   });
 
 });
 >>>>>>> efff260 (added the css, and javascript to the home page)
+=======
+>>>>>>> 5cfc5f3 (changed the pop up for the book now button)

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Rushin */
 
 
@@ -54,12 +55,15 @@ ul {
   letter-spacing: 0.5px;
 =======
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+=======
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+>>>>>>> 5cfc5f3 (changed the pop up for the book now button)
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Baloo 2', sans-serif;
 }
 
 body {
@@ -69,15 +73,17 @@ body {
 }
 
 .main {
-  width: 90%;
+  width: 100%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .hero {
   background: #135E4B;
-  padding: 25px 40px 80px;
+  padding: 25px 40px 10px;
   width: 100%;
+  color: white;
+  text-align: center;
 }
 
 /* navbar section */ 
@@ -568,58 +574,122 @@ h1 {
   display: inline-block;
 }
 
-/* footer section */
-.footer {
-  background-color: #4CB572;
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin-top: auto;
-  padding: 60px 8%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+
+  animation: popIn 0.3s ease;
 }
 
-.footer-col h4 {
+.modal-content h2 {
   color: #135E4B;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-.footer-col ul {
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  background: #4CB572;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #135E4B;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* footer section */
+footer {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footer {
+  background: #4CB572;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.footer h4 {
+  color: white;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.06rem;
+}
+
+.footer-column ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.footer-col li {
-  margin-bottom: 12px;
+.footer-column li {
+  margin-bottom: 0.6rem;
 }
 
-.footer-col a {
+.footer-column a {
   color: white;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.footer-col a:hover {
+.footer-column a:hover {
   color: #135E4B;
 }
 
 .copyright {
-  margin-top: 50px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.2);
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-
-  color: white;
-  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+  color: black;
+  background-color: #4CB572;
+  padding: 1rem;
+  letter-spacing: 0.07rem;
+  border-top: 1px solid rgba(255,255,255,0.3);
 }
 
 .copyright a {
@@ -629,6 +699,17 @@ h1 {
 
 .copyright a:hover {
   text-decoration: underline;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 180px;
+  height: auto;
 }
 
 /* responsive design */

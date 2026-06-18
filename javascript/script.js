@@ -13,7 +13,7 @@ bookButtons.forEach(button => {
     const tutorName = tutorCard.querySelector(".tutor-name").textContent;
 
     selectedTutor.textContent =
-      `You selected ${tutorName}.`;
+      `You selected ${tutorName}.`
 
     modal.style.display = "flex";
   });

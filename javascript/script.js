@@ -11,7 +11,7 @@ const nextBtn = document.querySelector(".right-arrow");
 
 
 let currentLeftCardIndex = 0;
-// const maxIndex = cards.length - 2;
+const maxIndex = cards.length - 2;
 
 function slideCarousel() {
     let slideAmount = 28;

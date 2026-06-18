@@ -1,6 +1,551 @@
 /* Rushin */
 
 
+/* Root Variables */
+
+:root{
+    --green-dark: #135E4B;
+    --green-mid: #4CB572;
+    --green-light: #A1D8B5;
+
+    --white: #FFFFFF;
+    --black: #000000;
+
+    --text-body: #111111;
+
+    --bg-card: #F6FDF8;
+    --grey-6: #D9D9D9;
+
+    --page-width: 1400px;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body-au{
+  font-family:'Segoe UI',sans-serif;
+  background:#f3f4f6;
+  color:var(--text-body);
+  line-height:1.7;
+  margin: 0;
+  padding: 0;
+}
+
+img-au{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* =========================
+   HERO + NAVBAR
+========================= */
+
+.hero-au{
+  background:var(--green-dark);
+  padding:20px 40px 60px;
+}
+
+.navbar-au{
+  max-width:1200px;
+  margin:auto;
+
+  background:var(--white);
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 35px;
+  border-radius:50px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.logo-au{
+  font-size:24px;
+  font-weight:700;
+  color:var(--black);
+}
+
+.nav-links-au{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+.nav-links-au a{
+  color:var(--black);
+  font-weight:500;
+  transition:.3s ease;
+}
+
+.nav-links-au a:hover{
+  color:var(--green-mid);
+}
+
+.hero-au h1{
+  text-align:center;
+  color:var(--white);
+  font-size:3rem;
+  margin-top:50px;
+}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-us-au{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 30px;
+}
+
+.why-us-au h2{
+  text-align:center;
+  color:var(--green-dark);
+  font-size:2.5rem;
+  margin-bottom:60px;
+}
+
+/* Fix missing wrapper in HTML */
+.why-us-au{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:40px;
+}
+
+.why-us-au h2{
+  grid-column:1/-1;
+}
+
+.feature-au{
+  background:var(--white);
+  padding:30px;
+  border-radius:20px;
+
+  text-align:center;
+
+  transition:all .4s ease;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+.feature-au:hover{
+  transform:translateY(-10px);
+
+  box-shadow:
+  0 15px 30px rgba(0,0,0,0.10),
+  0 0 15px rgba(76,181,114,.25);
+}
+
+.feature-au i{
+  font-size:55px;
+  color:var(--green-dark);
+  margin-bottom:20px;
+
+  transition:.4s ease;
+}
+
+.feature-au:hover i{
+  color:var(--green-mid);
+  transform:scale(1.1);
+}
+
+.feature-au p{
+  transition:.4s ease;
+}
+
+.feature-au:hover p{
+  color:var(--green-dark);
+  transform:translateY(-3px);
+}
+
+/* =========================
+   FOUNDERS
+========================= */
+
+.founders-au{
+  max-width:1200px;
+  margin:auto;
+  padding:40px 30px 80px;
+}
+
+.founders-au h2{
+  text-align:center;
+  color:var(--green-dark);
+  font-size:2.5rem;
+  margin-bottom:60px;
+}
+
+.founders-content-au{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.image-blob-au{
+  display:flex;
+  justify-content:center;
+}
+
+.image-blob-au img{
+  width:100%;
+  max-width:500px;
+  height:420px;
+  object-fit:cover;
+
+  border-radius:40px;
+
+  box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.founder-text-au p{
+  font-size:17px;
+}
+
+.mission-box-au{
+  margin-top:25px;
+
+  background:var(--green-light);
+
+  padding:25px;
+  border-radius:16px;
+}
+
+.mission-box-au h3{
+  color:var(--green-dark);
+  margin-bottom:10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: var(--green-mid);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.3rem 3rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-column {
+  width: 180px;
+}
+
+.footer-column h4 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 1.3rem;
+}
+
+.footer-column a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.footer-column a:hover {
+  color: var(--green-dark);
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 180px;
+  height: auto;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1000px;
+  gap: 100px;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.footer-copyright a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer-copyright a:hover {
+  color: var(--green-dark);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  .navbar-au{
+    flex-direction:column;
+    gap:15px;
+    border-radius:20px;
+  }
+
+  .nav-links-au{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .why-us-au{
+    grid-template-columns:1fr;
+  }
+
+  .founders-content-au{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .image-blob-au img{
+    height:auto;
+  }
+
+  .footer{
+    flex-direction:column;
+    gap:25px;
+    text-align:center;
+  }
+
+  .hero-au h1{
+    font-size:2.2rem;
+  }
+}
+
+/* =========================
+   SHARED SECTION STYLING
+========================= */
+
+.vision-au,
+.values-au,
+.impact-au,
+.about-closing-au {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.vision-au h2,
+.values-au h2,
+.impact-au h2,
+.about-closing-au h2 {
+  color: #135E4B;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.vision-au p,
+.about-closing-au p {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   VISION
+========================= */
+
+.vision-au {
+  background: #F6FDF8;
+}
+
+/* =========================
+   VALUES CARDS
+========================= */
+
+.values-au {
+  background: white;
+}
+
+.values-au {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.values-au h2 {
+  width: 100%;
+}
+
+.value-card-au {
+  width: 320px;
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.value-card-au:hover {
+  transform: translateY(-10px);
+  background: #135E4B;
+}
+
+.value-card-au h3 {
+  color: #135E4B;
+  margin-bottom: 15px;
+  transition: 0.4s;
+}
+
+.value-card-au p {
+  color: #666;
+  line-height: 1.7;
+  transition: 0.4s;
+}
+
+.value-card-au:hover h3,
+.value-card-au:hover p {
+  color: white;
+}
+
+/* =========================
+   IMPACT CARDS
+========================= */
+
+.impact-au {
+  background: #F6FDF8;
+}
+
+.stats-au {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.stat-au {
+  width: 250px;
+  background: white;
+  padding: 40px 20px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.stat-au:hover {
+  transform: translateY(-10px);
+  background: #4CB572;
+}
+
+.stat-au h3 {
+  color: #135E4B;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  transition: 0.4s;
+}
+
+.stat-au p {
+  color: #666;
+  transition: 0.4s;
+}
+
+.stat-au:hover h3,
+.stat-au:hover p {
+  color: white;
+}
+
+/* =========================
+   CLOSING SECTION
+========================= */
+
+.about-closing-au {
+  background: #135E4B;
+  color: white;
+}
+
+.about-closing-au h2 {
+  color: white;
+}
+
+.about-closing-au p {
+  color: rgba(255,255,255,0.9);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .value-card-au,
+  .stat-au {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .vision-au,
+  .values-au,
+  .impact-au,
+  .about-closing-au {
+    padding: 60px 8%;
+  }
+
+  .vision-au h2,
+  .values-au h2,
+  .impact-au h2,
+  .about-closing-au h2 {
+    font-size: 2rem;
+  }
+}
+
+.value-card-au.active {
+  background: #135E4B;
+  color: white;
+  transform: translateY(-10px);
+}
+
+.zoom-au {
+  transform: scale(1.1);
+  transition: 0.4s;
+}
+
+
+
 /* Angela */
 
 

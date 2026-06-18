@@ -231,9 +231,71 @@ a{
 
 /* =========================
    FOOTER
-========================= */
+=========================  */
+
+ footer {
+  background-color: #5cb874; /*Matches the green from the image */
+  color: #ffffff;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
 
 .footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 80px 30px;
+}
+
+.footer-column h4 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-column ul li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  opacity: 0.8;
+}
+
+.footer-logo img {
+  max-width: 180px;
+  height: auto;
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0c2117;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright a {
+  color: #1a6b45;
+  transition: opacity 0.2s ease;
+}
+
+.copyright a:hover {
+  opacity: 0.8;
+}
+
+
+
+/* .footer {
   background: var(--green-mid);
   display: flex;
   justify-content: space-between;
@@ -310,7 +372,7 @@ a{
 
 .footer-copyright a:hover {
   color: var(--green-dark);
-}
+} */
 
 
 /* =========================
@@ -343,11 +405,29 @@ a{
     height:auto;
   }
 
-  .footer{
+  .footer {
+    padding: 3rem 2rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .footer-logo {
+    margin-top: 0;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    padding: 1.5rem 1rem;
+    line-height: 1.6;
+  }
+  
+  /* .footer{
     flex-direction:column;
     gap:25px;
     text-align:center;
-  }
+  } */
 
   .hero-au h1{
     font-size:2.2rem;

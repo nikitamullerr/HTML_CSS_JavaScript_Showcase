@@ -14,13 +14,13 @@ body {
   line-height: 1.6;
 }
 
-.main {
+.main-fat {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.hero {
+.hero-fat {
   background: #135E4B;
   padding: 25px 40px 10px;
   width: 100%;
@@ -29,7 +29,7 @@ body {
 }
 
 /* navbar section */ 
-.navbar {
+.navbar-fat {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -41,25 +41,25 @@ body {
   align-items: center;
 }
 
-.logo {
+.logo-fat {
   font-size: 1.5rem;
   font-weight: 700;
   color: #000;
 }
 
-.nav-links {
+.nav-links-fat {
   display: flex;
   gap: 35px;
   list-style: none;
 }
 
-.nav-links a {
+.nav-links-fat a {
   text-decoration: none;
   color: #111;
   font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links-fat a:hover {
   color: #4CB572;
 }
 
@@ -71,7 +71,7 @@ h1 {
   font-weight: 800;
 }
 
-.main > p {
+.main-fat > p {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 40px;
@@ -80,7 +80,7 @@ h1 {
 
 /* filter section - find a tutor page */
 
-.filters {
+.filters-fat {
   display: flex;
   justify-content: center;
   align-items: end;
@@ -89,17 +89,17 @@ h1 {
   margin-bottom: 60px;
 }
 
-.filter-group {
+.filter-group-fat {
   display: flex;
   flex-direction: column;
 }
 
-.filter-group label {
+.filter-group-fat label {
   margin-bottom: 8px;
   font-size: 0.9rem;
 }
 
-.filter-group select {
+.filter-group-fat select {
   width: 220px;
   padding: 12px 18px;
   border: none;
@@ -108,7 +108,7 @@ h1 {
   outline: none;
 }
 
-.search-btn {
+.search-btn-fat {
   padding: 12px 40px;
   border: none;
   border-radius: 30px;
@@ -119,48 +119,48 @@ h1 {
   transition: 0.3s;
 }
 
-.search-btn:hover {
+.search-btn-fat:hover {
   transform: translateY(-3px);
   background: #3aa160;
 }
 
 /* stat section */
 
-.stats-row {
+.stats-row-fat {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   margin: 70px 0;
 }
 
-.stat {
+.stat-fat {
   background: rgba(255,255,255,0.08);
   padding: 25px;
   border-radius: 15px;
   text-align: center;
 }
 
-.stat-number {
+.stat-number-fat {
   display: block;
   font-size: 2rem;
   font-weight: 700;
   color: #4CB572;
 }
 
-.stat-label {
+.stat-label-fat {
   font-size: 0.95rem;
 }
 
 /* tutor cards section */
 
-.tutors-grid {
+.tutors-grid-fat {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
   gap: 30px;
   margin-bottom: 80px;
 }
 
-.tutor-card {
+.tutor-card-fat {
   background: white;
   border-radius: 20px;
   overflow: hidden;
@@ -168,17 +168,17 @@ h1 {
   transition: 0.3s;
 }
 
-.tutor-card:hover {
+.tutors-card-fat:hover {
   transform: translateY(-8px);
 }
 
-.tutor-card img {
+.tutors-card-fat img {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
-.card-tag {
+.card-tag-fat {
   background: #4CB572;
   color: white;
   display: inline-block;
@@ -188,25 +188,25 @@ h1 {
   font-size: 0.8rem;
 }
 
-.tutor-name {
+.tutors-name-fat {
   padding: 0 20px;
   margin-bottom: 10px;
 }
 
-.tutor-bio {
+.tutors-bio-fat {
   padding: 0 20px;
   color: #555;
   margin-bottom: 15px;
 }
 
-.pay-hour {
+.pay-hour-fat {
   padding: 0 20px;
   font-weight: 600;
   color: #135E4B;
   margin-bottom: 15px;
 }
 
-.book-btn {
+.book-btn-fat {
   margin: 0 20px 20px;
   width: calc(100% - 40px);
   padding: 12px;
@@ -218,18 +218,18 @@ h1 {
   transition: 0.3s;
 }
 
-.book-btn:hover {
+.book-btn-fat:hover {
   background: #4CB572;
 }
 
-.tags {
+.tags-fat {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin: 10px 20px 15px;
 }
 
-.tag {
+.tag-fat {
   background-color: #E8F7EE;
   color: #135E4B;
   padding: 6px 12px;
@@ -240,7 +240,7 @@ h1 {
   display: inline-block;
 }
 
-.modal {
+.modal-fat {
   display: none;
   position: fixed;
   top: 0;
@@ -255,7 +255,7 @@ h1 {
   z-index: 1000;
 }
 
-.modal-content {
+.modal-content-fat {
   background: white;
   padding: 30px;
   border-radius: 20px;
@@ -266,16 +266,16 @@ h1 {
   animation: popIn 0.3s ease;
 }
 
-.modal-content h2 {
+.modal-content-fat h2 {
   color: #135E4B;
   margin-bottom: 15px;
 }
 
-.modal-content p {
+.modal-content-fat p {
   margin-bottom: 20px;
 }
 
-.modal-content button {
+.modal-content-fat button {
   background: #4CB572;
   color: white;
   border: none;
@@ -284,7 +284,7 @@ h1 {
   cursor: pointer;
 }
 
-.modal-content button:hover {
+.modal-content-fat button:hover {
   background: #135E4B;
 }
 
@@ -301,12 +301,12 @@ h1 {
 }
 
 /* footer section */
-footer {
+footer-fat {
   width: 100%;
   margin-top: 50px;
 }
 
-.footer {
+.footer-fat {
   background: #4CB572;
   display: flex;
   justify-content: space-evenly;
@@ -314,41 +314,41 @@ footer {
   flex-wrap: wrap;
 }
 
-.footer h4 {
+.footer-fat h4 {
   color: white;
 }
 
-.footer-column {
+.footer-column-fat {
   display: flex;
   flex-direction: column;
 }
 
-.footer-column h4 {
+.footer-column-fat h4 {
   font-size: 1.1rem;
   margin-bottom: 0.8rem;
   letter-spacing: 0.06rem;
 }
 
-.footer-column ul {
+.footer-column-fat ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-column li {
+.footer-column-fat li {
   margin-bottom: 0.6rem;
 }
 
-.footer-column a {
+.footer-column-fat a {
   color: white;
   text-decoration: none;
 }
 
-.footer-column a:hover {
+.footer-column-fat a:hover {
   color: #135E4B;
 }
 
-.copyright {
+.copyright-fat {
   text-align: center;
   font-weight: 500;
   color: black;
@@ -358,22 +358,22 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.3);
 }
 
-.copyright a {
+.copyright-fat a {
   color: #135E4B;
   text-decoration: none;
 }
 
-.copyright a:hover {
+.copyright-fat a:hover {
   text-decoration: underline;
 }
 
-.footer-logo {
+.footer-logo-fat {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.footer-logo img {
+.footer-logo-fat img {
   width: 180px;
   height: auto;
 }
@@ -387,15 +387,15 @@ footer {
     font-size: 2.4rem;
   }
 
-  .navbar {
+  .navbar-fat {
     padding: 15px 25px;
   }
 
-  .nav-links {
+  .nav-links-fat {
     gap: 20px;
   }
 
-  .stats-row {
+  .stats-row-fat {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -403,11 +403,11 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .filters {
+  .filters-fat {
     justify-content: center;
   }
 
-  .filter-group select {
+  .filter-group-fat select {
     width: 200px;
   }
 }
@@ -415,7 +415,7 @@ footer {
 /* Mobile */
 @media (max-width: 768px) {
 
-  .hero {
+  .hero-fat {
     padding: 20px 20px 60px;
   }
 
@@ -424,40 +424,40 @@ footer {
     margin-top: 40px;
   }
 
-  .navbar {
+  .navbar-fat {
     flex-direction: column;
     gap: 15px;
     border-radius: 20px;
   }
 
-  .nav-links {
+  .nav-links-fat {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
 
-  .filters {
+  .filters-fat {
     flex-direction: column;
     align-items: center;
   }
 
-  .filter-group select {
+  .filter-group-fat select {
     width: 280px;
   }
 
-  .search-btn {
+  .search-btn-fat {
     width: 280px;
   }
 
-  .stats-row {
+  .stats-row-fat {
     grid-template-columns: 1fr;
   }
 
-  .tutors-grid {
+  .tutors-grid-fat {
     grid-template-columns: 1fr;
   }
 
-  .footer {
+  .footer-fat {
     padding: 3rem 2rem 2rem;
     flex-direction: column;
     align-items: center;
@@ -465,11 +465,11 @@ footer {
     gap: 2.5rem;
   }
 
-  .footer-logo {
+  .footer-logo-fat {
     margin-top: 0;
   }
 
-  .copyright {
+  .copyright-fat {
     font-size: 0.8rem;
     padding: 1.5rem 1rem;
     line-height: 1.6;
@@ -483,19 +483,19 @@ footer {
     font-size: 1.7rem;
   }
 
-  .filter-group select {
+  .filter-group-fat select {
     width: 100%;
   }
 
-  .search-btn {
+  .search-btn-fat {
     width: 100%;
   }
 
-  .navbar {
+  .navbar-fat {
     padding: 15px;
   }
 
-  .main {
+  .main-fat {
     width: 95%;
   }
 }

@@ -1,19 +1,25 @@
+
+
 console.log("JavaScript loaded");
 
-const bookButtons = document.querySelectorAll(".book-btn");
+const bookButtons = document.querySelectorAll(".book-btn-fat");
 
-const modal = document.getElementById("bookingModal");
+const modal = document.getElementById("bookingmodal-fat");
 const selectedTutor = document.getElementById("selectedTutor");
-const closeModal = document.getElementById("closeModal");
+const closeModal = document.getElementById("closeModal-fat");
+
+console.log(bookButtons);
+console.log(modal);
+console.log(closeModal);
 
 bookButtons.forEach(button => {
   button.addEventListener("click", () => {
 
-    const tutorCard = button.closest(".tutor-card");
-    const tutorName = tutorCard.querySelector(".tutor-name").textContent;
+    const tutorCard = button.closest(".tutors-card-fat");
+    const tutorName = tutorCard.querySelector(".tutors-name-fat").textContent;
 
     selectedTutor.textContent =
-      `You selected ${tutorName}.`
+      `You selected ${tutorName}.`;
 
     modal.style.display = "flex";
   });
@@ -30,57 +36,54 @@ window.addEventListener("click", (e) => {
 });
 
 // filtering buttons - find a tutor page
-const searchBtn = document.querySelector(".search-btn");
+const searchBtn = document.querySelector(".search-btn-fat");
 
 searchBtn.addEventListener("click", () => {
 
-    const selectedCourse =
-        document.getElementById("course").value;
+  const selectedCourse =
+    document.getElementById("course").value;
 
-    const selectedPrice =
-        document.getElementById("price").value;
+  const selectedPrice =
+    document.getElementById("price").value;
 
-    const selectedAvailability =
-        document.getElementById("availability").value;
+  const selectedAvailability =
+    document.getElementById("availability").value;
 
-    const selectedStyle =
-        document.getElementById("learning-style").value;
+  const selectedStyle =
+    document.getElementById("learning-style").value;
 
-    const tutors =
-        document.querySelectorAll(".tutor-card");
+  const tutors =
+    document.querySelectorAll(".tutors-card-fat");
 
-    tutors.forEach((tutor) => {
+  tutors.forEach((tutor) => {
 
-        const course = tutor.dataset.course;
-        const price = tutor.dataset.price;
-        const availability = tutor.dataset.availability;
-        const style = tutor.dataset.style;
+    const course = tutor.dataset.course;
+    const price = tutor.dataset.price;
+    const availability = tutor.dataset.availability;
+    const style = tutor.dataset.style;
 
-        const courseMatch =
-            selectedCourse === "Select a subject" ||
-            selectedCourse === course;
+    const courseMatch =
+      selectedCourse === "Select a subject" ||
+      selectedCourse === course;
 
-        const priceMatch =
-            selectedPrice === price;
+    const priceMatch =
+      selectedPrice === price;
 
-        const availabilityMatch =
-            selectedAvailability === availability;
+    const availabilityMatch =
+      selectedAvailability === availability;
 
-        const styleMatch =
-            selectedStyle === style;
+    const styleMatch =
+      selectedStyle === style;
 
-        if (
-            courseMatch &&
-            priceMatch &&
-            availabilityMatch &&
-            styleMatch
-        ) {
-            tutor.style.display = "block";
-        } else {
-            tutor.style.display = "none";
-        }
-
-    });
-
+    if (
+      courseMatch &&
+      priceMatch &&
+      availabilityMatch &&
+      styleMatch
+    ) {
+      tutor.style.display = "block";
+    } else {
+      tutor.style.display = "none";
+    }
+  });
 });
-

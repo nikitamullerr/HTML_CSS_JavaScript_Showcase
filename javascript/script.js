@@ -4,10 +4,10 @@
 /* Angela */
 
 // TARGET HTML ELEMENTS
-const track = document.querySelector(".testimonial-track");
-const cards = document.querySelectorAll(".story-card");
-const prevBtn = document.querySelector(".left-arrow");
-const nextBtn = document.querySelector(".right-arrow");
+const track = document.querySelector(".testimonial-track-tm");
+const cards = document.querySelectorAll(".story-card-tm");
+const prevBtn = document.querySelector(".left-arrow-tm");
+const nextBtn = document.querySelector(".right-arrow-tm");
 
 
 let currentLeftCardIndex = 0;

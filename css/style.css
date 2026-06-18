@@ -255,88 +255,65 @@ main {
 
 /* ─── FOOTER ─── */
 footer {
-  width: 100%;
+  background-color: #5cb874; /* Matches the green from the image */
+  color: #ffffff;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 .footer {
-  background: #5db981; /* adjusted background color to match screenshot */
   display: flex;
-  justify-content: space-between;
-  padding: 4rem 8rem 2rem;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 80px 30px;
 }
 
-.footer h4 {
-  color: white;
-  text-transform: uppercase;
+.footer-column h4 {
+  font-size: 0.9rem;
   font-weight: 800;
-  font-size: 1.05rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.06rem;
-}
-
-.footer-column {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.footer-column li {
-  margin-bottom: 1rem;
-}
-
-.footer-column a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.95rem;
+.footer-column ul li a {
+  font-size: 0.9rem;
   font-weight: 500;
+  transition: opacity 0.2s ease;
 }
 
-.footer-column a:hover {
-  color: #135E4B;
+.footer-column ul li a:hover {
+  opacity: 0.8;
+}
+
+.footer-logo img {
+  max-width: 180px;
+  height: auto;
 }
 
 .copyright {
   text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #0c2117;
-  background-color: #5db981; /* matched the footer background */
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.04rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.copyright p {
-  margin: 0;
+.copyright a {
+  color: #1a6b45;
+  transition: opacity 0.2s ease;
 }
 
-.copyright span a {
-  color: #1e7550;
-  text-decoration: none;
-  font-weight: 600;
+.copyright a:hover {
+  opacity: 0.8;
 }
 
-.copyright span a:hover {
-  text-decoration: underline;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: -20px;
-}
-
-.footer-logo img {
-  width: 220px;
-  height: auto;
-}
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {

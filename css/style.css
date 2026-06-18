@@ -365,7 +365,379 @@ footer {
 
 /* Adam */
 
+/* ─── Reset & Base ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+  background-color: #2d2d2d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ─── NAVBAR ─── */
+.navbar {
+  background-color: #7fcba6;
+  padding: 18px 50px 0;
+}
+
+.nav-inner {
+  background: #ffffff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 30px;
+}
+
+.nav-logo {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #0c2117;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #1e7550;
+}
+
+/* Active page link — set by JavaScript */
+.nav-active {
+  color: #1e7550 !important;
+  font-weight: 700 !important;
+}
+
+/* ─── HERO SECTION ─── */
+main {
+  flex: 1;
+}
+
+.hero {
+  background-color: #7fcba6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px 80px;
+  min-height: 480px;
+}
+
+.hero-content {
+  flex: 0 0 auto;
+  max-width: 460px;
+}
+
+.hero-heading {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #0c2117;
+  line-height: 1.2;
+  margin-bottom: 22px;
+}
+
+.hero-sub-line {
+  display: block;
+}
+
+.hero-accent {
+  color: #1a6b45;
+}
+
+.hero-paragraph {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 0.92rem;
+  color: #0c2117;
+  line-height: 1.65;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+/* ─── BUTTONS ─── */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #0c3524;
+  color: #ffffff;
+  border: none;
+  padding: 13px 30px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #092b1c;
+}
+
+.btn-outline {
+  background-color: #a8dbc0;
+  color: #0c3524;
+  border: 2.5px solid #0c3524;
+  padding: 11px 28px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: rgba(12, 53, 36, 0.08);
+}
+
+/* ─── HERO IMAGE PLACEHOLDER ─── */
+@keyframes float-glow {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    transform: translateY(-12px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15), 0 0 20px 8px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1), 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes float-bubble {
+  0% {
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: scale(1.05) translate(15px, -15px) rotate(3deg);
+  }
+  66% {
+    transform: scale(0.95) translate(-15px, 15px) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+}
+
+.hero-image-placeholder {
+  flex: 0 0 auto;
+  width: 500px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: float-glow 6s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image-placeholder::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  right: -30px;
+  bottom: -30px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+  z-index: -1;
+  animation: float-bubble 12s infinite ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+}
+
+.hero-image-placeholder:hover {
+  animation-play-state: paused;
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Real group photo — fills the box when a src is provided */
+.group-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: none;         /* hidden while src is empty */
+}
+
+/* Show the real image as soon as src is not empty */
+.group-photo[src]:not([src=""]) {
+  display: block;
+}
+
+/* Fallback label — visible while no real image is set */
+.placeholder-label {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #0c2117;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+
+/* Hide the label once a real image is loaded */
+.group-photo[src]:not([src=""]) ~ .placeholder-label {
+  display: none;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background-color: #5cb874; /* Matches the green from the image */
+  color: #ffffff;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 80px 30px;
+}
+
+.footer-column h4 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-column ul li a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  opacity: 0.8;
+}
+
+.footer-logo img {
+  max-width: 180px;
+  height: auto;
+}
+
+.copyright {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0c2117;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.copyright a {
+  color: #1a6b45;
+  transition: opacity 0.2s ease;
+}
+
+.copyright a:hover {
+  opacity: 0.8;
+}
+
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 15px 20px 0;
+  }
+  
+  .nav-inner {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px 60px;
+    text-align: center;
+    gap: 40px;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-heading {
+    font-size: 2.2rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-image-placeholder {
+    max-width: 100%;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 3rem 2rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .footer-logo {
+    margin-top: 0;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    padding: 1.5rem 1rem;
+    line-height: 1.6;
+  }
+}
 
 /* Nikita */
 

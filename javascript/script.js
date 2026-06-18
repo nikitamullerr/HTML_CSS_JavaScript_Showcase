@@ -8,60 +8,48 @@
 /* Adam */
 
 // ─── Helper: navigate to a page ───
-function navigateTo(url) {
+function navigateToHp(url) {
   window.location.href = url;
 }
 
 // ─── HERO BUTTONS ───
 
 // "Get Started" → Find a Tutor page
-document.getElementById('btn-get-started').addEventListener('click', function () {
-  navigateTo('findATutor.html');
+document.getElementById('btn-get-started-hp').addEventListener('click', function () {
+  navigateToHp('findATutor.html');
 });
 
 // "Success Stories" → Testimonials page
-document.getElementById('btn-success-stories').addEventListener('click', function () {
-  navigateTo('testimonials.html');
+document.getElementById('btn-success-stories-hp').addEventListener('click', function () {
+  navigateToHp('testimonials.html');
 });
 
 // ─── NAV LINKS: highlight the active page ───
-const navLinks = document.querySelectorAll('.nav-links a');
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const navLinksHp = document.querySelectorAll('.nav-links-hp a');
+const currentPageHp = window.location.pathname.split('/').pop() || 'index.html';
 
-navLinks.forEach(function (link) {
-  if (link.getAttribute('href') === currentPage) {
-    link.classList.add('nav-active');
+navLinksHp.forEach(function (link) {
+  if (link.getAttribute('href') === currentPageHp) {
+    link.classList.add('nav-active-hp');
   }
 });
 
 // ─── FOOTER NAV LINKS: same active-page highlight ───
-const footerNavLinks = document.querySelectorAll('.footer-col-links a');
+const footerNavLinksHp = document.querySelectorAll('.footer-column-hp a');
 
-footerNavLinks.forEach(function (link) {
-  if (link.getAttribute('href') === currentPage) {
-    link.classList.add('nav-active');
+footerNavLinksHp.forEach(function (link) {
+  if (link.getAttribute('href') === currentPageHp) {
+    link.classList.add('nav-active-hp');
   }
 });
 
-// ─── SOCIAL ICONS: coming-soon message ───
-// (replace alert with real URLs once social pages are live)
-const socialIds = ['footer-instagram', 'footer-tiktok', 'footer-youtube'];
 
-socialIds.forEach(function (id) {
-  const el = document.getElementById(id);
-  if (el) {
-    el.addEventListener('click', function (e) {
-      e.preventDefault();
-      alert('Our social media pages are coming soon! Stay tuned.');
-    });
-  }
-});
 
 // ─── FOOTER: Privacy Policy (coming soon) ───
 // Prevents the bare # link jumping the page until the policy page is ready
-var privacyLink = document.getElementById('footer-privacy-link');
-if (privacyLink) {
-  privacyLink.addEventListener('click', function (e) {
+var privacyLinkHp = document.getElementById('footer-privacy-link-hp');
+if (privacyLinkHp) {
+  privacyLinkHp.addEventListener('click', function (e) {
     e.preventDefault();
     alert('Our Privacy Policy page is coming soon!');
   });

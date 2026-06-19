@@ -1,5 +1,92 @@
-/* Rushin */
+// Rushin
 
+// =========================
+// 1. WELCOME MESSAGE BUTTON
+// =========================
+function showWelcome() {
+  alert(
+    "Welcome to TutorLink!\n\nWe connect students with experienced tutors who help improve understanding, build confidence, and achieve academic success."
+  );
+}
+
+// =========================
+// 2. FOOTER YEAR AUTO UPDATE
+// =========================
+function updateYear() {
+  const yearElement = document.getElementById("year");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+}
+
+// =========================
+// 3. IMPACT COUNTER ANIMATION
+// =========================
+function animateCounter(id, target, suffix = "") {
+  const element = document.getElementById(id);
+  if (!element) return;
+
+  let count = 0;
+  const speed = Math.ceil(target / 60);
+
+  const interval = setInterval(() => {
+    count += speed;
+
+    if (count >= target) {
+      count = target;
+      clearInterval(interval);
+    }
+
+    element.textContent = count + suffix;
+  }, 30);
+}
+
+// =========================
+// 4. SCROLL REVEAL ANIMATION
+// =========================
+function revealOnScroll() {
+  const sections = document.querySelectorAll(".hidden-au");
+
+  sections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < window.innerHeight - 100) {
+      section.classList.add("show-au");
+    }
+  });
+}
+
+// =========================
+// 5. VALUE CARD CLICK EFFECT
+// =========================
+function setupValueCards() {
+  const cards = document.querySelectorAll(".value-card-au");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      cards.forEach((c) => c.classList.remove("active-au"));
+      card.classList.add("active-au");
+    });
+  });
+}
+
+// =========================
+// 6. INITIALIZE EVERYTHING
+// =========================
+window.addEventListener("DOMContentLoaded", () => {
+  updateYear();
+
+  animateCounter("students-au", 500, "+");
+  animateCounter("tutors-au", 50, "+");
+  animateCounter("satisfaction-au", 67, "%");
+
+  revealOnScroll();
+  setupValueCards();
+});
+
+// Scroll event listener
+window.addEventListener("scroll", revealOnScroll);
 
 /* Angela */
 

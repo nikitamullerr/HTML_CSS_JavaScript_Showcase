@@ -112,4 +112,4 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.remove('navbar-ct-scrolled'); // FIXED
     }
   });
-});
+})

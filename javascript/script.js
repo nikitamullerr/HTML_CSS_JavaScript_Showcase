@@ -16,10 +16,10 @@
 /* Lukho */
 // TutorLink - Contact Page JS 
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contactForm');
-  const statusEl = document.getElementById('formStatus');
-  const submitBtn = form.querySelector('.btn-submit');
-  const titleEl = document.querySelector('.contact-title');
+  const form = document.getElementById('contactForm'); // HTML has no -ct on id
+  const statusEl = document.getElementById('formStatus'); // HTML has no -ct on id
+  const submitBtn = form.querySelector('.btn-submit-ct');
+  const titleEl = document.querySelector('.contact-title-ct');
 
   /* 1. TYPING ANIMATION FOR TITLE */
   if (titleEl) {
@@ -40,19 +40,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('reveal-active');
+        entry.target.classList.add('reveal-active-ct'); // FIXED
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.info-card, .contact-form-block').forEach(el => {
-    el.classList.add('reveal');
+  document.querySelectorAll('.info-card-ct, .contact-form-block-ct').forEach(el => { // FIXED
+    el.classList.add('reveal-ct'); // FIXED
     observer.observe(el);
   });
 
   /* 3. 3D TILT EFFECT */
-  document.querySelectorAll('.info-card').forEach(card => {
+  document.querySelectorAll('.info-card-ct').forEach(card => { // FIXED
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -73,9 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       submitBtn.disabled = true;
-      submitBtn.innerHTML = `<span class="spinner"></span> Sending...`;
+      submitBtn.innerHTML = `<span class="spinner-ct"></span> Sending...`; // FIXED
       statusEl.textContent = '';
-      statusEl.className = 'form-status';
+      statusEl.className = 'form-status-ct'; // FIXED
 
       const formData = new FormData(form);
       try {
@@ -104,12 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* 5. NAVBAR SHRINK */
-  const navbar = document.querySelector('.navbar');
+  const navbar = document.querySelector('.navbar-ct'); // FIXED
   window.addEventListener('scroll', () => {
     if (window.innerWidth > 768 && window.scrollY > 20) {
-      navbar.classList.add('navbar-scrolled');
+      navbar.classList.add('navbar-ct-scrolled'); // FIXED
     } else {
-      navbar.classList.remove('navbar-scrolled');
+      navbar.classList.remove('navbar-ct-scrolled'); // FIXED
     }
   });
 });

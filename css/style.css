@@ -526,7 +526,7 @@ a{
   }
 }
 
-.value-card-au.active {
+.value-card-au.active-au {
   background: #135E4B;
   color: white;
   transform: translateY(-10px);
@@ -537,6 +537,16 @@ a{
   transition: 0.4s;
 }
 
+.hidden-au {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show-au {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 /* Angela */

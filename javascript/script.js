@@ -1,37 +1,80 @@
+console.log("script.js is loaded")
 
 
-console.log("JavaScript loaded");
+/* Rushin */
 
-const bookButtons = document.querySelectorAll(".book-btn-fat");
 
-const modal = document.getElementById("bookingmodal-fat");
-const selectedTutor = document.getElementById("selectedTutor");
-const closeModal = document.getElementById("closeModal-fat");
+/* Angela */
 
-console.log(bookButtons);
-console.log(modal);
-console.log(closeModal);
+// TARGET HTML ELEMENTS
+const track = document.querySelector(".testimonial-track-tm");
+const cards = document.querySelectorAll(".story-card-tm");
+const prevBtn = document.querySelector(".left-arrow-tm");
+const nextBtn = document.querySelector(".right-arrow-tm");
 
-bookButtons.forEach(button => {
-  button.addEventListener("click", () => {
 
-    const tutorCard = button.closest(".tutors-card-fat");
-    const tutorName = tutorCard.querySelector(".tutors-name-fat").textContent;
+let currentLeftCardIndex = 0;
+const maxIndex = cards.length - 2;
 
-    selectedTutor.textContent =
-      `You selected ${tutorName}.`;
+function slideCarousel() {
+    let slideAmount = 28;
 
-    modal.style.display = "flex";
-  });
+    if (window.innerWidth <= 950) {
+        slideAmount = 19.5;
+    }
+
+    track.style.transform = `translateX(-${currentLeftCardIndex * slideAmount}rem)`;
+}
+
+nextBtn.addEventListener("click", () => {
+    const maxIndex = window.innerWidth <= 950 ? cards.length - 1 : cards.length - 2;
+
+    if (currentLeftCardIndex < maxIndex) {
+        currentLeftCardIndex++;
+    } else {
+        currentLeftCardIndex = 0;
+    }
+    slideCarousel();
 });
 
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
+prevBtn.addEventListener("click", () => {
+    const maxIndex = window.innerWidth <= 950 ? cards.length - 1 : cards.length -2;
+
+    if (currentLeftCardIndex > 0) {
+        currentLeftCardIndex--;
+    } else {
+        currentLeftCardIndex = maxIndex;
+    }
+    slideCarousel();
 });
 
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
+
+/* Adam */
+
+// ─── Helper: navigate to a page ───
+function navigateTo(url) {
+  window.location.href = url;
+}
+
+// ─── HERO BUTTONS ───
+
+// "Get Started" → Find a Tutor page
+document.getElementById('btn-get-started').addEventListener('click', function () {
+  navigateTo('findATutor.html');
+});
+
+// "Success Stories" → Testimonials page
+document.getElementById('btn-success-stories').addEventListener('click', function () {
+  navigateTo('testimonials.html');
+});
+
+// ─── NAV LINKS: highlight the active page ───
+const navLinks = document.querySelectorAll('.nav-links a');
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+navLinks.forEach(function (link) {
+  if (link.getAttribute('href') === currentPage) {
+    link.classList.add('nav-active');
   }
 });
 

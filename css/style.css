@@ -16,8 +16,7 @@
   padding: 0;
 }
 
-body {
-  font-family: 'Segoe UI', system-ui, Arial, sans-serif;
+.body-hp {
   background-color: #2d2d2d;
   min-height: 100vh;
   display: flex;
@@ -34,12 +33,12 @@ ul {
 }
 
 /* ─── NAVBAR ─── */
-.navbar {
+.navbar-hp {
   background-color: #7fcba6;
   padding: 18px 50px 0;
 }
 
-.nav-inner {
+.nav-inner-hp {
   background: #ffffff;
   border-radius: 50px;
   display: flex;
@@ -48,37 +47,37 @@ ul {
   padding: 14px 30px;
 }
 
-.nav-logo {
+.nav-logo-hp {
   font-weight: 800;
   font-size: 1rem;
   color: #0c2117;
   letter-spacing: 0.5px;
 }
 
-.nav-links {
+.nav-links-hp {
   display: flex;
   gap: 30px;
 }
 
-.nav-links a {
+.nav-links-hp a {
   font-size: 0.9rem;
   font-weight: 500;
   color: #1a1a1a;
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links-hp a:hover {
   color: #1e7550;
 }
 
 /* Active page link — set by JavaScript */
-.nav-active {
+.nav-active-hp {
   color: #1e7550 !important;
   font-weight: 700 !important;
 }
 
 /* ─── HERO SECTION ─── */
-main {
+.main-hp {
   flex: 1;
 }
 
@@ -113,7 +112,6 @@ main {
 }
 
 .hero-paragraph-hp {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
   font-size: 0.92rem;
   color: #0c2117;
   line-height: 1.65;
@@ -266,7 +264,6 @@ footer {
   background-color: #5cb874;
   /* Matches the green from the image */
   color: #ffffff;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 .footer {
@@ -314,12 +311,12 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.copyright-hp a {
+.copyright a {
   color: #1a6b45;
   transition: opacity 0.2s ease;
 }
 
-.copyright-hp a:hover {
+.copyright a:hover {
   opacity: 0.8;
 }
 
@@ -372,7 +369,7 @@ footer {
   }
 
   /* Footer */
-  .footer-hp {
+  .footer {
     padding: 3rem 2rem 2rem;
     flex-direction: column;
     align-items: center;
@@ -380,11 +377,11 @@ footer {
     gap: 2.5rem;
   }
 
-  .footer-logo-hp {
+  .footer-logo {
     margin-top: 0;
   }
 
-  .copyright-hp {
+  .copyright {
     font-size: 0.8rem;
     padding: 1.5rem 1rem;
     line-height: 1.6;

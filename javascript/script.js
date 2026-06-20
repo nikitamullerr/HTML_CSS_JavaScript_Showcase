@@ -1,3 +1,5 @@
+console.log("script.js is loaded")
+
 /* Rushin */
 
 
@@ -25,12 +27,12 @@ document.getElementById('btn-success-stories-hp').addEventListener('click', func
 });
 
 // ─── NAV LINKS: highlight the active page ───
-const navLinksHp = document.querySelectorAll('.nav-links a');
+const navLinksHp = document.querySelectorAll('.nav-links-hp a');
 const currentPageHp = window.location.pathname.split('/').pop() || 'index.html';
 
 navLinksHp.forEach(function (link) {
   if (link.getAttribute('href') === currentPageHp) {
-    link.classList.add('nav-active');
+    link.classList.add('nav-active-hp');
   }
 });
 
@@ -39,7 +41,7 @@ const footerNavLinksHp = document.querySelectorAll('.footer-column a');
 
 footerNavLinksHp.forEach(function (link) {
   if (link.getAttribute('href') === currentPageHp) {
-    link.classList.add('nav-active');
+    link.classList.add('nav-active-hp');
   }
 });
 

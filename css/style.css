@@ -101,6 +101,8 @@ a{
   margin-top:50px;
 }
 
+
+
 /* =========================
    WHY CHOOSE US
 ========================= */
@@ -236,7 +238,6 @@ a{
  footer {
   background-color: #5cb874; /*Matches the green from the image */
   color: #ffffff;
-  font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
 .footer {

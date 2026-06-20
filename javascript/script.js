@@ -67,12 +67,15 @@ searchBtn.addEventListener("click", () => {
       selectedCourse === course;
 
     const priceMatch =
+      selectedPrice === "Any Price" ||
       selectedPrice === price;
 
     const availabilityMatch =
+      selectedCourse === "Any Availability" ||
       selectedAvailability === availability;
 
     const styleMatch =
+      selectedCourse === "Any Style" ||
       selectedStyle === style;
 
     if (
@@ -81,7 +84,7 @@ searchBtn.addEventListener("click", () => {
       availabilityMatch &&
       styleMatch
     ) {
-      tutor.style.display = "block";
+      tutor.style.display = "";
     } else {
       tutor.style.display = "none";
     }

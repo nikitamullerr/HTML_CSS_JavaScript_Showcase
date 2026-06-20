@@ -58,7 +58,7 @@
     color: #4CB572;
 }
 
-h1 {
+#testimonials-page-heading {
     text-align: center;
     font-size: 3rem;
     margin-top: 60px;
@@ -225,7 +225,7 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
-    h1 {
+    #testimonials-page-heading {
         font-size: 2rem;
         margin-top: 30px;
     }
@@ -301,7 +301,7 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
-    h1 {
+    #testimonials-page-heading {
         font-size: 2rem;
         margin-top: 30px;
     }
@@ -612,7 +612,7 @@ main {
 }
 
 /* ─── FOOTER ─── */
-footer {
+/* footer {
   background-color: #5cb874; /* Matches the green from the image */
   color: #ffffff;
   font-family: 'Inter', 'Segoe UI', sans-serif;
@@ -670,7 +670,7 @@ footer {
 
 .copyright a:hover {
   opacity: 0.8;
-}
+} */
 
 
 /* --- Mobile Responsiveness --- */
@@ -720,7 +720,7 @@ footer {
   }
   
   /* Footer */
-  .footer {
+  /* .footer {
     padding: 3rem 2rem 2rem;
     flex-direction: column;
     align-items: center;
@@ -737,7 +737,7 @@ footer {
     padding: 1.5rem 1rem;
     line-height: 1.6;
   }
-}
+} */
 
 /* Nikita */
 

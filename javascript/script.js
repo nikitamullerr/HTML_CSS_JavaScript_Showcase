@@ -1,3 +1,6 @@
+console.log("script.js is loaded")
+
+
 /* Rushin */
 
 

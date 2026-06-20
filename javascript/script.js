@@ -25,21 +25,21 @@ document.getElementById('btn-success-stories-hp').addEventListener('click', func
 });
 
 // ─── NAV LINKS: highlight the active page ───
-const navLinksHp = document.querySelectorAll('.nav-links-hp a');
+const navLinksHp = document.querySelectorAll('.nav-links a');
 const currentPageHp = window.location.pathname.split('/').pop() || 'index.html';
 
 navLinksHp.forEach(function (link) {
   if (link.getAttribute('href') === currentPageHp) {
-    link.classList.add('nav-active-hp');
+    link.classList.add('nav-active');
   }
 });
 
 // ─── FOOTER NAV LINKS: same active-page highlight ───
-const footerNavLinksHp = document.querySelectorAll('.footer-column-hp a');
+const footerNavLinksHp = document.querySelectorAll('.footer-column a');
 
 footerNavLinksHp.forEach(function (link) {
   if (link.getAttribute('href') === currentPageHp) {
-    link.classList.add('nav-active-hp');
+    link.classList.add('nav-active');
   }
 });
 
@@ -47,7 +47,7 @@ footerNavLinksHp.forEach(function (link) {
 
 // ─── FOOTER: Privacy Policy (coming soon) ───
 // Prevents the bare # link jumping the page until the policy page is ready
-var privacyLinkHp = document.getElementById('footer-privacy-link-hp');
+var privacyLinkHp = document.getElementById('footer-privacy-link');
 if (privacyLinkHp) {
   privacyLinkHp.addEventListener('click', function (e) {
     e.preventDefault();

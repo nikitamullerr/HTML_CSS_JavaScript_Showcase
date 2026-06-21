@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<body lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>
+      Find a Tutor
+    </title>
+  </head>
+
+  <body class="body-fat">
+
+    <div class="hero-fat">
+
+      <nav class="navbar-fat">
+        <div class="logo-fat">
+          <a href="index.html">TutorLink</a>
+        </div>
+        <ul class="nav-links-fat">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="findATutor.html">Find a Tutor</a></li>
+          <li><a href="aboutUs.html">About</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content-fat">
+
+        <h1>Find the Perfect Tutor for You</h1>
+
+        <p>
+          Connect with trusted, affordable tutors matched to your course,
+          learning style, and budget.
+        </p><br>
+
+        <div class="filters-fat">
+
+          <div class="filter-group-fat">
+            <label for="course">Course</label>
+            <select id="course">
+              <option>Select a subject</option>
+              <option>Mathematics</option>
+              <option>Computer Science</option>
+              <option>Economics</option>
+              <option>Physics</option>
+              <option>Biology</option>
+              <option>English Literature</option>
+            </select>
+          </div>
+
+          <div class="filter-group-fat">
+            <label for="price">Price Range</label>
+            <select id="price">
+              <option>Any Price</option>
+              <option>R50 - R100/hr</option>
+              <option>R100 - R150/hr</option>
+              <option>R150 - R200/hr</option>
+            </select>
+          </div>
+
+          <div class="filter-group-fat">
+            <label for="availability">Availability</label>
+            <select id="availability">
+              <option>Any Availability</option>
+              <option>Evenings & Weekends</option>
+              <option>Weekdays</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+
+          <div class="filter-group-fat">
+            <label for="learning-style">Learning Style</label>
+            <select id="learning-style">
+              <option>Any Style</option>
+              <option>Visual</option>
+              <option>Auditory</option>
+              <option>Reading/Writing</option>
+              <option>Hands-on</option>
+            </select>
+          </div>
+
+          <button class="search-btn-fat">Search</button>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="main-fat">
+
+
+      <div class="stats-row-fat">
+        <div class="stat-fat">
+          <span class="stat-number-fat">96%</span>
+          <span class="stat-label-fat">Successful Tutors</span>
+        </div>
+        <div class="stat-fat">
+          <span class="stat-number-fat">4.9 ★</span>
+          <span class="stat-label-fat">Average Student Rating</span>
+        </div>
+        <div class="stat-fat">
+          <span class="stat-number-fat">15k+</span>
+          <span class="stat-label-fat">Sessions Completed</span>
+        </div>
+        <div class="stat-fat">
+          <span class="stat-number-fat">15k+</span>
+          <span class="stat-label-fat">Active Students</span>
+        </div>
+      </div>
+
+      <div class="product-grid-fat">
+        <p id="no-results" style="display:none; text-align:center; font-weight:bold;">
+          No tutors match your filters. Try adjusting your search.
+        </p>
+
+        <div class="tutors-grid-fat">
+          <div class="tutors-card-fat" data-course="Mathematics" data-price="R100 - R150/hr"
+            data-availability="Weekdays" data-style="Visual">
+            <img src="https://i.ibb.co/CLgq93v/pexels-boko-shots-812604874-19836045.jpg" alt="">
+            <h3 class="tutors-name-fat">David Mwakodi</h3>
+            <div class="tags-fat">
+              <span class="tag-fat">Mathematics</span>
+              <span class="tag-fat">Visual</span>
+              <span class="tag-fat">Weekdays</span>
+            </div>
+
+            <p class="tutors-bio-fat">Patient and encouraging tutor who enjoys helping students build confidence and
+              achieve their academic goals.</p>
+            <p class="pay-hour-fat">Pay per hour · R100/hr</p>
+            <button class="book-btn-fat">Book Now</button>
+          </div>
+
+          <div class="tutors-card-fat" data-course="Computer Science" data-price="R150 - R200/hr"
+            data-availability="Flexible" data-style="Hands-on">
+            <img src="https://i.ibb.co/pjsYyBW0/pexels-globaldecency-13565833.jpg">
+            <h3 class="tutors-name-fat">Cherish Nwachukwu</h3>
+            <div class="tags-fat">
+              <span class="tag-fat">Computer Science</span>
+              <span class="tag-fat">Hands-on</span>
+              <span class="tag-fat">Flexible</span>
+            </div>
+            <p class="tutors-bio-fat">Dedicated tutor with a passion for simplifying difficult concepts and making
+              learning enjoyable.</p>
+            <p class="pay-hour-fat">Pay per hour · R150/hr</p>
+            <button class="book-btn-fat">Book Now</button>
+          </div>
+
+
+          <div class="tutors-card-fat" data-course="Economics" data-price="R50 - R100/hr" data-availability="Weekdays"
+            data-style="Reading/Writing">
+            <img src="https://i.ibb.co/0jbhHc2f/pexels-mikhail-nilov-6981004.jpg">
+            <h3 class="tutors-name-fat">Mikayla Nilov</h3>
+            <div class="tags-fat">
+              <span class="tag-fat">Economics</span>
+              <span class="tag-fat">Reading/Writing</span>
+              <span class="tag-fat">Weekdays</span>
+            </div>
+            <p class="tutors-bio-fat">Friendly and supportive tutor who creates a positive learning environment for
+              every
+              student.</p>
+            <p class="pay-hour-fat">Pay per hour · R50/hr</p>
+            <button class="book-btn-fat">Book Now</button>
+          </div>
+
+          <div class="tutors-card-fat" data-course="Physics" data-price="R150 - R200/hr"
+            data-availability="Evenings & Weekends" data-style="Visual">
+            <img src="https://i.ibb.co/LXhS7ntL/pexels-oluwaseun-adekoya-670640633-17798552.jpg">
+            <h3 class="tutors-name-fat">Olwakhe Adekoya</h3>
+            <div class="tags-fat">
+              <span class="tag-fat">Physics</span>
+              <span class="tag-fat">Visual</span>
+              <span class="tag-fat">Evenings & Weekends</span>
+            </div>
+            <p class="tutors-bio-fat">Experienced tutor who focuses on practical understanding and steady academic
+              improvement.</p>
+            <p class="pay-hour-fat">Pay per hour · R200/hr</p>
+            <button class="book-btn-fat">Book Now</button>
+          </div>
+
+
+          <div class="tutors-card-fat" data-course="Biology" data-price="R100 - R150/hr" data-availability="Weekdays"
+            data-style="Hands-on">
+
+            <img src="https://i.ibb.co/XrtmbLxk/pexels-katerina-holmes-5905483.jpg">
+            <h3 class="tutors-name-fat">Njabulo Mokoena</h3>
+
+            <div class="tags-fat">
+              <span class="tag-fat">Biology</span>
+              <span class="tag-fat">Hands-on</span>
+              <span class="tag-fat">Weekdays</span>
+            </div>
+
+            <p class="tutors-bio-fat">Enthusiastic educator who helps students develop strong study habits and
+              problem-solving skills.</p>
+            <p class="pay-hour-fat">Pay per hour · R100/hr</p>
+            <button class="book-btn-fat">Book Now</button>
+          </div>
+
+          <div class="tutors-card-fat" data-course="Computer Science" data-price="R150 - R200/hr"
+            data-availability="Flexible" data-style="Hands-on">
+            <img src="https://i.ibb.co/p62n96w7/images.jpg">
+            <h3 class="tutors-name-fat">Jane Daniels</h3>
+            <div class="tags-fat">
+              <span class="tag-fat">Computer Science</span>
+              <span class="tag-fat">Hands-on</span>
+              <span class="tag-fat">Flexible</span>
+            </div>
+            <p class="tutors-bio-fat">Motivated tutor who enjoys guiding students through challenging subjects with
+              clarity and patience.</p>
+            <p class="pay-hour-fat">Pay per hour · R150/hr</p>
+            <button class="book-btn-fat">Book Now</button>
+          </div>
+
+          <div class="tutors-card-fat" data-course="English Literature" data-price="R50 - R100/hr"
+            data-availability="Evenings & Weekends" data-style="Reading/Writing">
+            <img src="https://i.ibb.co/RkR7GWYD/images-1.jpg">
+            <h3 class="tutors-name-fat">James Johnson</h3>
+            <div class="tags-fat">
+              <span class="tag-fat">English Literature</span>
+              <span class="tag-fat">Reading/Writing</span>
+              <span class="tag-fat">Evenings & Weekends</span>
+            </div>
+            <p class="tutors-bio-fat">Compassionate tutor who believes every student can succeed with the right support
+              and encouragement.</p>
+            <p class="pay-hour-fat">Pay per hour · R100/hr</p>
+            <button class="book-btn-fat">Book Now</button>
+          </div>
+
+        </div>
+
+        <div class="modal-fat" id="bookingmodal-fat">
+          <div class="modal-content-fat">
+            <h2>Booking Request</h2>
+            <p id="selectedTutor"></p>
+
+            <button id="closeModal-fat">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+  <footer>
+    <div class="footer-fat">
+
+      <div class="footer-column-fat">
+        <h4>NAVIGATION</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="findATutor.html">Find a Tutor</a></li>
+          <li><a href="aboutUs.html">About</a></li>
+          <li><a href="testimonials.html">Testimonials</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo in the middle -->
+      <div class="footer-logo-fat">
+        <img src="https://i.ibb.co/dJfjKT7J/Mon-15-06-2026-08-57-37-removebg-preview.png" alt="TutorLink Logo">
+      </div>
+
+      <div class="footer-column-fat">
+        <h4>FAQs</h4>
+        <ul>
+          <li><a href="contactUs.html">Support</a></li>
+          <li><a href="findATutor.html">Tutoring</a></li>
+          <li><a href="aboutUs.html">Company</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="copyright-fat">
+      <p>
+        Copyright &copy; 2026 TutorLink. All rights reserved.
+        <span><a href="#">Terms of Use</a></span> |
+        <span><a href="#">Privacy Policy</a></span>
+      </p>
+    </div>
+
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="javascript/script.js"></script>
+
+
+</body>
+</html>

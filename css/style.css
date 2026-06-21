@@ -1,3 +1,4 @@
+/* IMPORT FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 
@@ -5,7 +6,6 @@
 /* Rushin */
 
 /* Root Variables */
-
 :root{
     --green-dark: #135E4B;
     --green-mid: #4CB572;
@@ -33,7 +33,6 @@
 }
 
 .body-au{
-  font-family:'Segoe UI',sans-serif;
   background:#f3f4f6;
   color:var(--text-body);
   line-height:1.7;
@@ -608,7 +607,7 @@ a{
   color: #4CB572;
 }
 
-h1 {
+#testimonials-page-heading {
   text-align: center;
   font-size: 3rem;
   margin-top: 60px;
@@ -788,7 +787,7 @@ footer {
     justify-content: center;
   }
 
-  h1 {
+  #testimonials-page-heading {
     font-size: 2rem;
     margin-top: 30px;
   }
@@ -874,7 +873,7 @@ footer {
     justify-content: center;
   }
 
-  h1 {
+  #testimonials-page-heading {
     font-size: 2rem;
     margin-top: 30px;
   }
@@ -1338,7 +1337,7 @@ footer {
   font-family: 'Baloo 2', sans-serif;
 }
 
-body {
+.body-fat {
   background: #f8f9f8;
   color: #222;
   line-height: 1.6;
@@ -1393,7 +1392,7 @@ body {
   color: #4CB572;
 }
 
-h1 {
+.hero-content-fat h1 {
   text-align: center;
   font-size: 3rem;
   margin-top: 60px;
@@ -1722,7 +1721,7 @@ footer-fat {
 /* Tablets */
 @media (max-width: 1024px) {
 
-  h1 {
+  .hero-content-fat h1 {
     font-size: 2.4rem;
   }
 
@@ -1758,7 +1757,7 @@ footer-fat {
     padding: 20px 20px 60px;
   }
 
-  h1 {
+  .hero-content-fat h1 {
     font-size: 2rem;
     margin-top: 40px;
   }
@@ -1818,7 +1817,7 @@ footer-fat {
 /* Small phones */
 @media (max-width: 480px) {
 
-  h1 {
+  .hero-content-fat h1 {
     font-size: 1.7rem;
   }
 
@@ -1838,6 +1837,8 @@ footer-fat {
     width: 95%;
   }
 }
+
+
 
 /* Lukho */
 
@@ -1924,7 +1925,7 @@ body.contact-page-ct {
 
 /* ===== CONTACT TITLE IN HERO ===== */
 .contact-title-ct {
-  font-family: "Baloo 2", cursive;
+  font-family: "Baloo 2", sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   color: var(--white);
   text-align: center;
@@ -2174,7 +2175,6 @@ body.contact-page-ct {
   letter-spacing: 0.06rem;
   font-weight: 800;
   text-transform: uppercase;
-  font-family: "Inter", sans-serif;
 }
 
 .footer-column-ct ul {

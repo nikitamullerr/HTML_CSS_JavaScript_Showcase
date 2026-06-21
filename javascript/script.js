@@ -1,6 +1,7 @@
 console.log("JavaScript loaded")
 
 
+
 /* Rushin */
 
 // =========================
@@ -15,13 +16,13 @@ function showWelcome() {
 // =========================
 // 2. FOOTER YEAR AUTO UPDATE
 // =========================
-function updateYear() {
-  const yearElement = document.getElementById("year");
+// function updateYear() {
+//   const yearElement = document.getElementById("year");
 
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
-}
+//   if (yearElement) {
+//     yearElement.textContent = new Date().getFullYear();
+//   }
+// }
 
 // =========================
 // 3. IMPACT COUNTER ANIMATION
@@ -78,7 +79,7 @@ function setupValueCards() {
 // 6. INITIALIZE EVERYTHING
 // =========================
 window.addEventListener("DOMContentLoaded", () => {
-  updateYear();
+  // updateYear();
 
   animateCounter("students-au", 500, "+");
   animateCounter("tutors-au", 50, "+");
@@ -95,47 +96,100 @@ window.addEventListener("scroll", revealOnScroll);
 
 /* Angela */
 
+// // TARGET HTML ELEMENTS
+// const track = document.querySelector(".testimonial-track-tm");
+// const cards = document.querySelectorAll(".story-card-tm");
+// const prevBtn = document.querySelector(".left-arrow-tm");
+// const nextBtn = document.querySelector(".right-arrow-tm");
+
+
+// let currentLeftCardIndex = 0;
+// const maxIndex = cards.length - 2;
+
+// function slideCarousel() {
+//     let slideAmount = 28;
+
+//     if (window.innerWidth <= 950) {
+//         slideAmount = 19.5;
+//     }
+
+//     track.style.transform = `translateX(-${currentLeftCardIndex * slideAmount}rem)`;
+// }
+
+// nextBtn.addEventListener("click", () => {
+//     const maxIndex = window.innerWidth <= 950 ? cards.length - 1 : cards.length - 2;
+
+//     if (currentLeftCardIndex < maxIndex) {
+//         currentLeftCardIndex++;
+//     } else {
+//         currentLeftCardIndex = 0;
+//     }
+//     slideCarousel();
+// });
+
+// prevBtn.addEventListener("click", () => {
+//     const maxIndex = window.innerWidth <= 950 ? cards.length - 1 : cards.length -2;
+
+//     if (currentLeftCardIndex > 0) {
+//         currentLeftCardIndex--;
+//     } else {
+//         currentLeftCardIndex = maxIndex;
+//     }
+//     slideCarousel();
+// });
+
 // TARGET HTML ELEMENTS
 const track = document.querySelector(".testimonial-track-tm");
 const cards = document.querySelectorAll(".story-card-tm");
 const prevBtn = document.querySelector(".left-arrow-tm");
 const nextBtn = document.querySelector(".right-arrow-tm");
 
+if (track && prevBtn && nextBtn) {
 
-let currentLeftCardIndex = 0;
-const maxIndex = cards.length - 2;
+  let currentLeftCardIndex = 0;
 
-function slideCarousel() {
+  function slideCarousel() {
     let slideAmount = 28;
 
     if (window.innerWidth <= 950) {
-        slideAmount = 19.5;
+      slideAmount = 19.5;
     }
 
-    track.style.transform = `translateX(-${currentLeftCardIndex * slideAmount}rem)`;
-}
+    track.style.transform =
+      `translateX(-${currentLeftCardIndex * slideAmount}rem)`;
+  }
 
-nextBtn.addEventListener("click", () => {
-    const maxIndex = window.innerWidth <= 950 ? cards.length - 1 : cards.length - 2;
+  nextBtn.addEventListener("click", () => {
+    const maxIndex =
+      window.innerWidth <= 950
+        ? cards.length - 1
+        : cards.length - 2;
 
     if (currentLeftCardIndex < maxIndex) {
-        currentLeftCardIndex++;
+      currentLeftCardIndex++;
     } else {
-        currentLeftCardIndex = 0;
+      currentLeftCardIndex = 0;
     }
-    slideCarousel();
-});
 
-prevBtn.addEventListener("click", () => {
-    const maxIndex = window.innerWidth <= 950 ? cards.length - 1 : cards.length -2;
+    slideCarousel();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    const maxIndex =
+      window.innerWidth <= 950
+        ? cards.length - 1
+        : cards.length - 2;
 
     if (currentLeftCardIndex > 0) {
-        currentLeftCardIndex--;
+      currentLeftCardIndex--;
     } else {
-        currentLeftCardIndex = maxIndex;
+      currentLeftCardIndex = maxIndex;
     }
+
     slideCarousel();
-});
+  });
+
+}
 
 
 /* Adam */
@@ -148,14 +202,29 @@ function navigateToHp(url) {
 // ─── HERO BUTTONS ───
 
 // "Get Started" → Find a Tutor page
-document.getElementById('btn-get-started-hp').addEventListener('click', function () {
-  navigateToHp('findATutor.html');
-});
+// document.getElementById('btn-get-started-hp').addEventListener('click', function () {
+//   navigateToHp('findATutor.html');
+// });
+// 12:30 21/06/2026
+const getStartedBtn = document.getElementById('btn-get-started-hp');
 
+if (getStartedBtn) {
+  getStartedBtn.addEventListener('click', function () {
+    navigateToHp('findATutor.html');
+  });
+}
 // "Success Stories" → Testimonials page
-document.getElementById('btn-success-stories-hp').addEventListener('click', function () {
-  navigateToHp('testimonials.html');
-});
+// document.getElementById('btn-success-stories-hp').addEventListener('click', function () {
+//   navigateToHp('testimonials.html');
+// });
+//12:32 21/06/2026
+const successStoriesBtn = document.getElementById('btn-success-stories-hp');
+
+if (successStoriesBtn) {
+  successStoriesBtn.addEventListener('click', function () {
+    navigateToHp('testimonials.html');
+  });
+}
 
 // ─── NAV LINKS: highlight the active page ───
 const navLinksHp = document.querySelectorAll('.nav-links-hp a');
@@ -214,9 +283,16 @@ bookButtons.forEach(button => {
   });
 });
 
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
+// closeModal.addEventListener("click", () => {
+//   modal.style.display = "none";
+// });
+//12:51 21/06/2026
+
+if (closeModal) {
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+}
 
 window.addEventListener("click", (e) => {
   if (e.target === modal) {
@@ -225,9 +301,16 @@ window.addEventListener("click", (e) => {
 });
 
 // filtering buttons - find a tutor page
+// const searchBtn = document.querySelector(".search-btn-fat");
+
+// if (searchBtn) {
+
+// searchBtn.addEventListener("click", () => {
+//12:54 21/06/2026
 const searchBtn = document.querySelector(".search-btn-fat");
 
-searchBtn.addEventListener("click", () => {
+if (searchBtn) {
+  searchBtn.addEventListener("click", () => {
 
   const selectedCourse =
     document.getElementById("course").value;
@@ -260,11 +343,11 @@ searchBtn.addEventListener("click", () => {
       selectedPrice === price;
 
     const availabilityMatch =
-      selectedCourse === "Any Availability" ||
+      selectedAvailability === "Any Availability" ||
       selectedAvailability === availability;
 
     const styleMatch =
-      selectedCourse === "Any Style" ||
+      selectedStyle === "Any Style" ||
       selectedStyle === style;
 
     if (
@@ -279,6 +362,8 @@ searchBtn.addEventListener("click", () => {
     }
   });
 });
+}
+
 
 
 // Lukho
@@ -287,8 +372,14 @@ searchBtn.addEventListener("click", () => {
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm'); // HTML has no -ct on id
   const statusEl = document.getElementById('formStatus'); // HTML has no -ct on id
-  const submitBtn = form.querySelector('.btn-submit-ct');
+  // const submitBtn = form.querySelector('.btn-submit-ct');
   const titleEl = document.querySelector('.contact-title-ct');
+
+  let submitBtn = null;
+
+  if (form) {
+    submitBtn = form.querySelector('.btn-submit-ct');
+  }
 
   /* 1. TYPING ANIMATION FOR TITLE */
   if (titleEl) {
@@ -374,6 +465,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* 5. NAVBAR SHRINK */
   const navbar = document.querySelector('.navbar-ct'); // FIXED
+
+if (navbar) {  
   window.addEventListener('scroll', () => {
     if (window.innerWidth > 768 && window.scrollY > 20) {
       navbar.classList.add('navbar-ct-scrolled'); // FIXED
@@ -381,4 +474,5 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.remove('navbar-ct-scrolled'); // FIXED
     }
   });
-})
+ }
+}); 

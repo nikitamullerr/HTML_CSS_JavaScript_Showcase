@@ -149,6 +149,3 @@ Git was probably the biggest learning curve for us as a team. We ran into merge 
 
 
 Built as part of the HTML, CSS + JavaScript Showcase Brief — YouthCode Programme, Life Choices Academy, Cape Town.
-
-*Built as part of the HTML, CSS + JavaScript Showcase Brief — YouthCode Programme, Life Choices Academy, Cape Town.*
-*Facilitator: Tyhiesha Johnson*

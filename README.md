@@ -48,7 +48,7 @@ Tertiary students who need subject-specific academic support and want a match th
 
 | Name | Page / Section | Branch |
 |------|----------------|--------|
-| Adam | Home Page | adam-dev |
+| Adam | Home Page | adam-homepage |
 | Rushin | About Us | rushin-dev |
 | Nikita | Find a Tutor | nikita-dev |
 | Angela | Testimonials | angela-dev |
